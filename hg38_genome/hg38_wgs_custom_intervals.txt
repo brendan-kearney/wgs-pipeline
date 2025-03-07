@@ -1,0 +1,1 @@
+/data/reddylab/cegs_ccgr/analyses/shah_acgc/pipeline_gatk/hg38_genome/wgs_calling_regions.hg38.interval_list

@@ -1,0 +1,13 @@
+{
+  "ConvertPairedFastQsToUnmappedBamWf.readgroup_name": "133Parent_141",
+  "ConvertPairedFastQsToUnmappedBamWf.sample_name": "133Parent_141",
+  "ConvertPairedFastQsToUnmappedBamWf.fastq_1": "/nfs/cegs-ccgr/data/raw/Crawford_7515_220304B6/133Parent_141_R1.fastq.gz",
+  "ConvertPairedFastQsToUnmappedBamWf.fastq_2": "/nfs/cegs-ccgr/data/raw/Crawford_7515_220304B6/133Parent_141_R2.fastq.gz",
+  "ConvertPairedFastQsToUnmappedBamWf.library_name": "Solexa-NA12878",
+  "ConvertPairedFastQsToUnmappedBamWf.platform_unit": "H06HDADXX130110.2.ATCACGAT",
+  "ConvertPairedFastQsToUnmappedBamWf.run_date": "2016-09-01T02:00:00+0200",
+  "ConvertPairedFastQsToUnmappedBamWf.platform_name": "illumina",
+  "ConvertPairedFastQsToUnmappedBamWf.sequencing_center": "BI",
+
+  "ConvertPairedFastQsToUnmappedBamWf.make_fofn": true  
+}

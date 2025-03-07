@@ -1,0 +1,9 @@
+{
+  "HaplotypeCallerGvcf_GATK4.input_bam": "/nfs/cegs-ccgr/analyses/gatk-workflows/cromwell-executions/PreProcessingForVariantDiscovery_GATK4/a4a38c04-8fed-49c3-884d-cb735c7c5dcf/call-GatherBamFiles/execution/H06HDADXX130110.hg38.bam",
+  "HaplotypeCallerGvcf_GATK4.input_bam_index": "/nfs/cegs-ccgr/analyses/gatk-workflows/cromwell-executions/PreProcessingForVariantDiscovery_GATK4/a4a38c04-8fed-49c3-884d-cb735c7c5dcf/call-GatherBamFiles/execution/H06HDADXX130110.hg38.bai",
+  "HaplotypeCallerGvcf_GATK4.ref_dict": "/nfs/cegs-ccgr/analyses/gatk-workflows/genomes/hg38_genome/hg38.dict",
+  "HaplotypeCallerGvcf_GATK4.ref_fasta": "/nfs/cegs-ccgr/analyses/gatk-workflows/genomes/hg38_genome/hg38.fa",
+  "HaplotypeCallerGvcf_GATK4.ref_fasta_index": "/nfs/cegs-ccgr/analyses/gatk-workflows/genomes/hg38_genome/hg38.fa.fai",
+
+  "HaplotypeCallerGvcf_GATK4.scattered_calling_intervals_list": "/nfs/cegs-ccgr/analyses/gatk-workflows/genomes/hg38_genome/hg38_wgs_custom_intervals.txt"
+}

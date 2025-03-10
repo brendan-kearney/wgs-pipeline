@@ -62,13 +62,13 @@ A complete hg38 reference directory is available at:
 ### Step 3: Adapter Trimming with Trimmomatic
 - **Script**: `3-run_trimmomatic.sh`
 - **Tools**: Trimmomatic
-- **Purpose**: Removes Illumina adapters and generates trimmed paired-end FASTQ files.
+- **Purpose**: Removes Illumina adapters and generates trimmed paired-end FASTQ files. Optional if needed.
 - **Output**: Trimmed FASTQ files (`sampleA_R1_trimmed.fastq.gz`, `sampleA_R2_trimmed.fastq.gz`)
 
 ### Step 4: Convert FASTQ to Unmapped BAM (uBAM)
 - **Script**: `4-cromwell_seqFormat.sh`
 - **Tools**: Cromwell
-- **Purpose**: Converts FASTQ to uBAM format, preparing it for alignment.
+- **Purpose**: Converts FASTQ to uBAM format, preparing it for alignment. If no trimming was required, merged FastQ files from Step 1 may be used as input.
 - **Output**: Unmapped BAM file (`sampleA.unmapped.bam`)
 
 ### Step 5: Read Preprocessing & Alignment

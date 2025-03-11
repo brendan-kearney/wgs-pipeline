@@ -13,6 +13,7 @@ OUTPUT_DIR="/path/to/pipeline_gatk"
 INPUT_DIR="$OUTPUT_DIR/input_uBAMs"
 GENOME_DIR="$OUTPUT_DIR/hg38_genome"
 INPUTS_DIR="$OUTPUT_DIR/inputs"
+CROMWELLDIR="/path/to/cromwell_jar_file"
 
 # Navigate to output directory
 cd "$OUTPUT_DIR"
@@ -65,7 +66,7 @@ EOT
 cd "$OUTPUT_DIR"
 
 # Run GATK4 PreProcessing pipeline using Cromwell
-java -Dconfig.file=no_sql.conf -jar cromwell-78.jar run -i "$INPUTS_DIR/$FILENAME.hg38.wgs.inputs.json" "$OUTPUT_DIR/gatk4-data-processing-2.1.1/processing-for-variant-discovery-gatk4.wdl"
+java -Dconfig.file=no_sql.conf -jar $CROMWELLDIR/cromwell-78.jar run -i "$INPUTS_DIR/$FILENAME.hg38.wgs.inputs.json" "$OUTPUT_DIR/gatk4-data-processing-2.1.1/processing-for-variant-discovery-gatk4.wdl"
 
 echo "Processing completed for $FILENAME."
 

@@ -12,6 +12,7 @@
 # Define directories
 SAMPLEDIR="/path/to/trimmed_fastqc"
 WORKDIR="/path/to/pipeline_gatk"
+CROMWELLDIR="/path/to/cromwell_jar_file"
 
 cd "$WORKDIR"
 
@@ -21,6 +22,7 @@ export SINGULARITY_CACHEDIR="$WORKDIR/.singularity/cache"
 readarray -t SAMPLES < "$WORKDIR/sample_names.txt"
 FILENAME=${SAMPLES[(($SLURM_ARRAY_TASK_ID - 1))]}
 
+mkdir -p inputs
 cd inputs
 
 R1_SUFFIX="_R1_trimmed.fastq.gz"

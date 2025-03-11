@@ -10,7 +10,8 @@
 # The extra json info (library name, platform, etc) are unnecessary to run the script
 
 # Define directories
-SAMPLEDIR="/path/to/trimmed_fastqc"
+# SAMPLEDIR can be the location of the trimmed fastq files, or untrimmed (processed_fastq), depending on if step 3 was needed.
+SAMPLEDIR="/path/to/trimmed_fastqc" 
 WORKDIR="/path/to/pipeline_gatk"
 CROMWELLDIR="/path/to/cromwell_jar_file"
 
@@ -25,6 +26,7 @@ FILENAME=${SAMPLES[(($SLURM_ARRAY_TASK_ID - 1))]}
 mkdir -p inputs
 cd inputs
 
+# May need to modify depending on the naming format of your files
 R1_SUFFIX="_R1_trimmed.fastq.gz"
 R2_SUFFIX="_R2_trimmed.fastq.gz"
 

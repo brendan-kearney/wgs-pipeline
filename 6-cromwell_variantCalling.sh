@@ -17,6 +17,7 @@ BAM_DIR="$WORKDIR/finished_bams"
 STATS_DIR="$BAM_DIR/bam_stats"
 GENOME_DIR="$WORKDIR/hg38_genome"
 INPUTS_DIR="$WORKDIR/inputs"
+CROMWELLDIR="/path/to/cromwell_jar_file"
 
 # Navigate to working directory
 cd "$WORKDIR"
@@ -54,7 +55,7 @@ EOT
 # Run Cromwell with the generated JSON input
 echo "Starting Cromwell for $FILENAME..."
 cd "$WORKDIR"
-java -Dconfig.file=no_sql.conf -jar cromwell-78.jar run -i "$INPUTS_DIR/$FILENAME.haplotypecaller-inputs.json" gatk4-germline-snps-indels/haplotypecaller-gvcf-gatk4.wdl
+java -Dconfig.file=no_sql.conf -jar $CROMWELLDIR/cromwell-78.jar run -i "$INPUTS_DIR/$FILENAME.haplotypecaller-inputs.json" gatk4-germline-snps-indels/haplotypecaller-gvcf-gatk4.wdl
 
 echo "Variant calling completed for $FILENAME."
 

@@ -121,6 +121,9 @@ These files will need manual processing before the next step.
 
 Exomiser is a Java program that identifies potential disease-causing variants from whole-exome or whole-genome sequencing data using phenotype-driven algorithms.
 
+This is the best source for understanding Exomiser and the specifics of the analysis customization.
+https://exomiser.readthedocs.io/en/latest/
+
 ### Steps of an Exomiser Run:
 1. **Inputs**: A joint-called VCF trio file and an associated `.ped` file.
 2. **Annotation** of variants using Jannovar.

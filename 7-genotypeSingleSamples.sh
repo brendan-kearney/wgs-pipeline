@@ -6,9 +6,7 @@
 # This script performs joint genotyping on pre-called GVCFs using GATK4 GenotypeGVCFs.
 # It then applies Variant Quality Score Recalibration (VQSR) for SNPs and indels.
 # The final recalibrated VCF file is generated, along with variant statistics.
-
-# Activate the required Conda environment
-source /path/to/miniconda3/bin/activate /path/to/software/envs/my_env
+# Required tools: gatk4 and bcftools. Conda/mamba works fine.
 
 # Define directories
 RUNDIR="/path/to/pipeline_gatk"

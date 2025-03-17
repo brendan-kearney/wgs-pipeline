@@ -5,13 +5,10 @@
 # This script performs joint genotyping on multiple GVCFs using GATK4 GenotypeGVCFs.
 # It then applies Variant Quality Score Recalibration (VQSR) for SNPs and indels.
 # The final recalibrated VCF file is generated, along with variant statistics.
-
-# Load required modules
-module load GATK/4.1.0.0-gcb02
-module load bcftools
+# Required tools: gatk4 and bcftools. Conda/mamba works fine.
 
 # Define cohort name
-COHORTNAME="205_family"
+COHORTNAME="sample_family"
 
 # Define directories
 SAMPLEDIR="/path/to/finished_GVCFs"
@@ -20,7 +17,7 @@ GENOMEDIR="/path/to/hg38_genome"
 VCF_STATS_DIR="$WORKDIR/VCF_stats"
 
 # Define samples for the cohort (Modify this list for each run)
-SAMPLES=("acgc197" "acgc205")
+SAMPLES=("proband1" "parent1")
 
 # Ensure necessary directories exist
 mkdir -p "$WORKDIR/genotype_$COHORTNAME"

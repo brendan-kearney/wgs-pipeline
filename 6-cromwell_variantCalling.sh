@@ -37,6 +37,11 @@ mkdir -p "$STATS_DIR"
 echo "Calculating BAM statistics for $FILENAME..."
 samtools stats "$BAM_DIR/$FILENAME.hg38.bam" > "$STATS_DIR/$FILENAME.bam.stats"
 
+# Update the intervals file dynamically
+echo "Updating interval file..."
+cat "$GENOME_DIR/wgs_calling_regions.hg38.interval_list" | tr '\n' ' ' > "$GENOME_DIR/hg38_wgs_custom_intervals.txt"
+echo "" >> "$GENOME_DIR/hg38_wgs_custom_intervals.txt"  # Ensure the file ends with a newline
+
 # Generate JSON input file for Cromwell execution
 echo "Generating JSON input for HaplotypeCaller..."
 cd "$INPUTS_DIR"

@@ -71,6 +71,12 @@ A complete hg38 reference directory is available at:
 - **Purpose**: Converts FASTQ to uBAM format, preparing it for alignment. If no trimming was required, merged FastQ files from Step 1 may be used as input.
 - **Output**: Unmapped BAM file (`sampleA.unmapped.bam`)
 
+### Optional step: Transfer Cromwell Outputs
+- **Script**: 'transfer_cromwell_outputs.sh'
+- **Tools**: Bash scripting
+- **Purpose**: After every Cromwell WDL step, transfer the output files (unmapped.bam, bam/bai, g.vcf/g.vcf.tbi) to a new directory to avoid having to deal with Cromwell's randomly generated directories for each sample. Useful if performing parallel analysis on large cohorts (10+ samples at a time). Note that copying a single whole-genome bam file takes a few minutes per file.
+- **Output**: Files copied to a single folder (ex: wgs-pipeline/input_uBAMs, wgs-pipeline/finished_bams)
+
 ### Step 5: Read Preprocessing & Alignment
 - **Script**: `5-cromwell_preProcessing.sh`
 - **Tools**: Cromwell, GATK
@@ -158,6 +164,8 @@ All Exomiser analyses should be run in the `EXOMISER` directory, requiring `.yam
 
 Both operate with two scripts, starting with a script to run all testing tools in parallel (run_spliceTests.sh and sv_analysis.sh), and an integration script to compile data and output results (splice_tools.sh and SV_processing.R). 
 Structural variant analysis is in its own folder.
+Tools used for splicing annotation: SpliceAI, MaxEntScan, SpliceRegion, GeneSplicer, SpliceVault, dbscSNV, CADD, SQUIRLS, python (for integration)
+Tools used for structural variant annotation: delly, breakdancer, lumpy, pindel, CNVpytor (newer version of CNVnator), R (for integration via intansv)
 
 ---
 

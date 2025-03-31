@@ -14,7 +14,7 @@ cd $OUTPUT_DIR
 
 # This script is specific for 4-cromwell_seqFormat.sh but can be modified to fit other cromwell steps. Paths in cromwell-executions will have to be modified to fit those outputs
 # Note that other cromwell steps have different path formats as well as different file names (*.unmapped.bam, *.hg38.bam, etc)
-# If there is an error the uBAM file either doesn't exist
+# Extra index files (bam.bai, g.vcf.tbi, etc) can be copied by adding an extra copy line after line 33 with the index files' names in a similar format.
 
 mkdir -p $OUTPUT_DIR/input_uBAMs
 cd cromwell-executions/ConvertPairedFastQsToUnmappedBamWf

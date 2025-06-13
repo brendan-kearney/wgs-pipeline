@@ -1,3 +1,13 @@
+# =============================================================================
+# Splice Variant Annotation Integration Pipeline (R Version)
+#
+# This script processes and integrates splicing-related variant annotations 
+# from multiple sources: VEP (including MES, dbscSNV, CADD), SQUIRLS, and SpliceAI.
+# It extracts relevant information, applies thresholds to flag high-impact variants,
+# and merges the results into a single summary table for comparative analysis.
+# The final output ranks variants by the number of high-impact calls across tools.
+# =============================================================================
+
 # Load required libraries
 library(dplyr)
 library(tidyr)

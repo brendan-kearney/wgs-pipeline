@@ -14,7 +14,7 @@ library(plyr)  # Ensure plyr is loaded for llply function
 
 # Define the base directory
 base_directory <- "/path/to/pipeline/SV_analysis"
-ref_directory <- "/data/reddylab/Reference_Data/brendan-reference/hg38_genome/hg38_annotation.txt"
+ref_directory <- "/path/to/reference/directory/hg38_genome/hg38_annotation.txt"
 
 # Define the centralized output directory
 global_output_dir <- file.path(base_directory, "sv_analysis_results")

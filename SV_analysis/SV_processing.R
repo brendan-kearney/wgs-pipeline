@@ -1,3 +1,11 @@
+# =============================================================================
+# Structural Variant Analysis and Annotation Pipeline (R Version)
+#
+# This script performs structural variant (SV) analysis across multiple samples
+# by integrating output from tools such as Delly, BreakDancer, Pindel, and Lumpy using
+# intansv (https://github.com/YaoLab-Bioinfo/intansv)
+# =============================================================================
+
 # Load required libraries
 library(intansv)
 library(openxlsx)
